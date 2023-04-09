@@ -1,0 +1,52 @@
+<html>
+<head>
+
+	<link rel="stylesheet" type="text/css" href="style.css">
+    <title>Calculadora</title>
+    
+	<script>
+
+		function soma(){
+			var soma = (parseFloat(n1.value)+parseFloat(n2.value));
+			document.getElementById('soma').innerHTML = 'Soma: '+soma;
+		}
+
+		function sub(){
+			var sub = (parseFloat(n1.value)-parseFloat(n2.value));
+			document.getElementById('sub').innerHTML = 'Subtração: '+sub;
+		}
+
+		function mult(){
+			var mult = (parseFloat(n1.value)*parseFloat(n2.value));
+			document.getElementById('mult').innerHTML = 'Multiplicação: '+mult;
+		}
+
+		function div(){
+			var div = (parseFloat(n1.value)/parseFloat(n2.value));
+			document.getElementById('div').innerHTML = 'Divisão: '+div;
+		}
+		
+	</script>
+
+</head>
+<body>
+
+	<center><h1>Calculadora das NewJeans!</h1></center>
+
+	<form>
+		<p class="texto1">Numero 1:<input type="text" id="n1"></p>
+		<p class="texto1">Numero 2:<input type="text" id="n2"></p>
+
+		<input type="button" class= "button" value="Calcular Soma" onclick="soma();">
+		<input type="button" class= "button" value="Calcular Subtração" onclick="sub();">
+		<input type="button" class= "button" value="Calcular Multiplicação" onclick="mult();">
+		<input type="button" class= "button" value="Calcular Divisão" onclick="div();">
+
+	</form>
+	<h2 id="soma"></h2>
+	<h2 id="sub"></h2>
+	<h2 id="mult"></h2>
+	<h2 id="div"></h2>
+	
+</body>
+</html>
