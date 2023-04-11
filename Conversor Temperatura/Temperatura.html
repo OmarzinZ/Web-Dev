@@ -1,0 +1,96 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Conversor-Temperatura</title>
+
+	<style>
+		body {
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+}
+
+form {
+  max-width: 500px;
+  margin: 0 auto;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form p {
+  margin: 10px 0;
+}
+
+form input[type="text"] {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  width: 100%;
+}
+
+form input[type="button"] {
+  background-color: #742797;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+form input[type="button"]:hover {
+  background-color: #9f71a8;
+}
+
+h1{
+	text-align: center;
+	font-family: Verdana, serif;
+	color: #742797;
+} 
+
+h2 {
+  text-align: center;
+  font-size: 24px;
+  margin: 20px 0;
+  font-weight: normal;
+  font-family: Verdana, serif;
+  color: #742797;
+}
+	</style>
+
+    <script>
+
+    	function cel(){
+			var cel = ((tempC.value * 1.8) + 32);
+			document.getElementById('cel').innerHTML = 'Cel: '+cel.toFixed(2);
+		}
+
+
+		function far(){
+			var far = ((tempF.value - 32) /1.8);
+			document.getElementById('far').innerHTML = 'Far: '+far.toFixed(2);
+		}
+
+    </script>
+
+</head>
+<body>
+
+	<center><h1>Conversor de Temperaturas</h1></center>
+
+	<form>
+		<p>Digite a Temperatura em Celsius:<input type="text" id="tempC"></p>
+		<p>Digite a Temperatura em Fahrenheit:<input type="text" id="tempF"></p>
+
+		<input type="button" value="Celsius para Fahrenheit" onclick="cel();">
+		<input type="button" value="Fahrenheit para Celsius" onclick="far();">
+
+	</form>
+	<h2 id="cel"></h2>
+	<h2 id="far"></h2>
+
+</body>
+</html>
